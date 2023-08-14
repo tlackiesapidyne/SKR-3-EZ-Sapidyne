@@ -555,7 +555,7 @@ void PrintJobRecovery::resume() {
   gcode.process_subcommands_now(cmd);
 
   // Restore E position with G92.9
-  sprintf_P(cmd, PSTR("G92.9E%s"), dtostrf(info.current_position.e, 1, 3, str_1));
+ // sprintf_P(cmd, PSTR("G92.9E%s"), dtostrf(info.current_position.e, 1, 3, str_1)); * Scout *
   gcode.process_subcommands_now(cmd);
 
   TERN_(GCODE_REPEAT_MARKERS, repeat = info.stored_repeat);

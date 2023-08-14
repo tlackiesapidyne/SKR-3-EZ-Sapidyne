@@ -87,12 +87,12 @@ void GcodeSuite::M125() {
   // If possible, show an LCD prompt with the 'P' flag
   const bool show_lcd = TERN0(HAS_MARLINUI_MENU, parser.boolval('P'));
 
-  if (pause_print(retract, park_point, show_lcd, 0)) {
+ /* if (pause_print(retract, park_point, show_lcd, 0)) {
     if (ENABLED(EXTENSIBLE_UI) || BOTH(EMERGENCY_PARSER, HOST_PROMPT_SUPPORT) || !sd_printing || show_lcd) {
       wait_for_confirmation(false, 0);
       resume_print(0, 0, -retract, 0);
     }
-  }
+  } * Scout * */
 }
 
 #endif // PARK_HEAD_ON_PAUSE
